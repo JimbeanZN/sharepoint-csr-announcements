@@ -1,0 +1,19 @@
+{
+  "name": "sharepoint-csr-announcements",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimbeanZN/sharepoint-csr-announcements.git"
+  },
+  "author": "Doron Epstein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JimbeanZN/sharepoint-csr-announcements/issues"
+  },
+  "homepage": "https://github.com/JimbeanZN/sharepoint-csr-announcements#readme"
+}

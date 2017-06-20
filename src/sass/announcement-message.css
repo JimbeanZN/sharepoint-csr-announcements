@@ -1,0 +1,299 @@
+.notification {
+  display: block;
+  clear: both;
+  margin-bottom: 15px;
+  padding: 10px 10px 10px 40px;
+  min-height: 20px;
+  font-family: Arial, Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset;
+  -o-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset
+}
+
+.icon {
+  position: absolute;
+  background-image: url(../images/icon/notification.png);
+  background-repeat: no-repeat;
+  height: 15px;
+  top: 14px
+}
+
+.notification span {
+  font-weight: bold;
+  margin-right: 10px
+}
+
+.notification .close-notification {
+  position: absolute;
+  width: 5px;
+  height: 6px;
+  top: 18px;
+  right: 10px;
+  cursor: pointer;
+  background-image: url(../images/icon/close.png);
+  background-repeat: no-repeat
+}
+
+.notification:after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 25px;
+  top: 0;
+  left: 15px;
+  background: url(../images/shadow.png) top center no-repeat
+}
+
+.success {
+  border: 1px solid #accc5d;
+  color: #70892b;
+  background-color: #c8e185;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d0e98e), color-stop(100%, #c1da7f));
+  background-image: -webkit-linear-gradient(#d0e98e, #c1da7f);
+  background-image: -moz-linear-gradient(#d0e98e, #c1da7f);
+  background-image: -o-linear-gradient(#d0e98e, #c1da7f);
+  background-image: linear-gradient(#d0e98e, #c1da7f);
+  -moz-text-shadow: 0px 1px rgba(255, 255, 255, 0.3);
+  text-shadow: 0px 1px rgba(255, 255, 255, 0.3)
+}
+
+.success .icon {
+  width: 14px;
+  left: 16px;
+  background-position: 0 -15px
+}
+
+.success .close-notification {
+  background-position: 0 -6px
+}
+
+.fail {
+  border: 1px solid #dc4e4d;
+  color: #b52525;
+  background-color: #ec8282;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f48888), color-stop(100%, #e17575));
+  background-image: -webkit-linear-gradient(#f48888, #e17575);
+  background-image: -moz-linear-gradient(#f48888, #e17575);
+  background-image: -o-linear-gradient(#f48888, #e17575);
+  background-image: linear-gradient(#f48888, #e17575);
+  -moz-text-shadow: 0px 1px rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 1px rgba(255, 255, 255, 0.2)
+}
+
+.fail .icon {
+  width: 13px;
+  left: 16px;
+  background-position: 0 0
+}
+
+.fail .close-notification {
+  background-position: 0 0
+}
+
+.info {
+  border: 1px solid #69c0ca;
+  color: #3d8d98;
+  background-color: #8aced6;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #99e2eb), color-stop(100%, #79c6cd));
+  background-image: -webkit-linear-gradient(#99e2eb, #79c6cd);
+  background-image: -moz-linear-gradient(#99e2eb, #79c6cd);
+  background-image: -o-linear-gradient(#99e2eb, #79c6cd);
+  background-image: linear-gradient(#99e2eb, #79c6cd);
+  -moz-text-shadow: 0px 1px rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 1px rgba(255, 255, 255, 0.2)
+}
+
+.info .icon {
+  width: 6px;
+  left: 19px;
+  background-position: 0 -30px
+}
+
+.info .close-notification {
+  background-position: 0 -12px
+}
+
+.warning {
+  border: 1px solid #f9b516;
+  color: #c2721b;
+  background-color: #fbb160;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffd57f), color-stop(100%, #ffa544));
+  background-image: -webkit-linear-gradient(#ffd57f, #ffa544);
+  background-image: -moz-linear-gradient(#ffd57f, #ffa544);
+  background-image: -o-linear-gradient(#ffd57f, #ffa544);
+  background-image: linear-gradient(#ffd57f, #ffa544);
+  -moz-text-shadow: 0px 1px rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 1px rgba(255, 255, 255, 0.2)
+}
+
+.warning .icon {
+  width: 14px;
+  left: 16px;
+  top: 13px;
+  background-position: 0 -45px
+}
+
+.warning .close-notification {
+  background-position: 0 -18px
+}
+
+.edit {
+  border: 1px solid #e9c95f;
+  color: #ae8500;
+  background-color: #f3dc8f;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffeaa7), color-stop(100%, #f3d573));
+  background-image: -webkit-linear-gradient(#ffeaa7, #f3d573);
+  background-image: -moz-linear-gradient(#ffeaa7, #f3d573);
+  background-image: -o-linear-gradient(#ffeaa7, #f3d573);
+  background-image: linear-gradient(#ffeaa7, #f3d573);
+  -moz-text-shadow: 0px 1px rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 1px rgba(255, 255, 255, 0.2)
+}
+
+.edit .icon {
+  width: 13px;
+  left: 16px;
+  top: 13px;
+  background-position: 0 -60px
+}
+
+.edit .close-notification {
+  background-position: 0 -18px
+}
+
+.lock {
+  border: 1px solid #CCC;
+  color: #666;
+  background-color: #e8e8e8;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f4f4f4), color-stop(100%, #e0e0e0));
+  background-image: -webkit-linear-gradient(#f4f4f4, #e0e0e0);
+  background-image: -moz-linear-gradient(#f4f4f4, #e0e0e0);
+  background-image: -o-linear-gradient(#f4f4f4, #e0e0e0);
+  background-image: linear-gradient(#f4f4f4, #e0e0e0);
+  -moz-text-shadow: 0px 1px rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 1px rgba(255, 255, 255, 0.2)
+}
+
+.lock .icon {
+  width: 11px;
+  left: 17px;
+  top: 13px;
+  background-position: 0 -75px
+}
+
+.lock .close-notification {
+  background-position: 0 -24px
+}
+
+.tip {
+  border: 1px solid #e6b96f;
+  color: #b1802f;
+  background-color: #f5dcb2;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffedcf), color-stop(100%, #f8d69e));
+  background-image: -webkit-linear-gradient(#ffedcf, #f8d69e);
+  background-image: -moz-linear-gradient(#ffedcf, #f8d69e);
+  background-image: -o-linear-gradient(#ffedcf, #f8d69e);
+  background-image: linear-gradient(#ffedcf, #f8d69e);
+  -moz-text-shadow: 0px 1px rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 1px rgba(255, 255, 255, 0.2)
+}
+
+.tip .icon {
+  width: 9px;
+  left: 18px;
+  top: 12px;
+  background-position: 0 -90px
+}
+
+.tip .close-notification {
+  background-position: 0 -30px
+}
+
+.download {
+  border: 1px solid #3178c0;
+  color: #0c4fa3;
+  background-color: #6dacea;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8ed0fa), color-stop(100%, #4e95dc));
+  background-image: -webkit-linear-gradient(#8ed0fa, #4e95dc);
+  background-image: -moz-linear-gradient(#8ed0fa, #4e95dc);
+  background-image: -o-linear-gradient(#8ed0fa, #4e95dc);
+  background-image: linear-gradient(#8ed0fa, #4e95dc);
+  -moz-text-shadow: 0px 1px rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 1px rgba(255, 255, 255, 0.2)
+}
+
+.download .icon {
+  width: 10px;
+  left: 18px;
+  background-position: 0 -105px
+}
+
+.download .close-notification {
+  background-position: 0 -36px
+}
+
+.chat {
+  border: 1px solid #5d902f;
+  color: #366f11;
+  background-color: #89bc5a;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8dcb3d), color-stop(100%, #74a547));
+  background-image: -webkit-linear-gradient(#8dcb3d, #74a547);
+  background-image: -moz-linear-gradient(#8dcb3d, #74a547);
+  background-image: -o-linear-gradient(#8dcb3d, #74a547);
+  background-image: linear-gradient(#8dcb3d, #74a547);
+  -moz-text-shadow: 0px 1px rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 1px rgba(255, 255, 255, 0.2)
+}
+
+.chat .icon {
+  width: 14px;
+  left: 16px;
+  background-position: 0 -120px
+}
+
+.chat .close-notification {
+  background-position: 0 -42px
+}
+
+.task {
+  border: 1px solid #71502b;
+  color: #432c12;
+  background-color: #92724e;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a58868), color-stop(100%, #886640));
+  background-image: -webkit-linear-gradient(#a58868, #886640);
+  background-image: -moz-linear-gradient(#a58868, #886640);
+  background-image: -o-linear-gradient(#a58868, #886640);
+  background-image: linear-gradient(#a58868, #886640);
+  -moz-text-shadow: 0px 1px rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 1px rgba(255, 255, 255, 0.2)
+}
+
+.task .icon {
+  width: 14px;
+  left: 16px;
+  top: 13px;
+  background-position: 0 -135px
+}
+
+.task .close-notification {
+  background-position: 0 -48px
+}
+
+@media only screen and (min-width:0px) and (max-width:479px) {
+  .notification {
+    font-size: 11px !important;
+    min-height: 14px !important;
+    line-height: 14px !important
+  }
+  .notification span {
+    margin-right: 3px !important
+  }
+}
