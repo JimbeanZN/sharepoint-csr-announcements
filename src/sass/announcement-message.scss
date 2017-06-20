@@ -1,0 +1,99 @@
+.notification {
+  display: block;
+  clear: both;
+  margin-bottom: 15px;
+  padding: 10px 10px 10px 40px;
+  min-height: 20px;
+  font-family: Arial, Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 20px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset;
+  -webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset;
+  -o-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset;
+
+  span {
+    font-weight: bold;
+    margin-right: 10px
+  }
+
+  .close-notification {
+    position: absolute;
+    width: 5px;
+    height: 6px;
+    top: 18px;
+    right: 10px;
+    cursor: pointer;
+    background-image: url(/images/icon/close.png);
+    background-repeat: no-repeat
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 25px;
+    top: 0;
+    left: 15px;
+    background: url(/images/shadow.png) top center no-repeat
+  }
+}
+
+.icon {
+  position: absolute;
+  background-image: url(/images/icon/notification.png);
+  background-repeat: no-repeat;
+  height: 15px;
+  top: 14px;
+}
+
+@mixin notification-color($border, $colour, $background, $background-fade-from, $background-fade-to, $opacity, $width, $left, $top, $icon, $close-notification) {
+  border: 1px solid $border;
+  color: $colour;
+  background-color: $background;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $background-fade-from), color-stop(100%, $background-fade-to));
+  background-image: -webkit-linear-gradient($background-fade-from, $background-fade-to);
+  background-image: -moz-linear-gradient($background-fade-from, $background-fade-to);
+  background-image: -o-linear-gradient($background-fade-from, $background-fade-to);
+  background-image: linear-gradient($background-fade-from, $background-fade-to);
+  -moz-text-shadow: 0 1px rgba(255, 255, 255, $opacity);
+  text-shadow: 0 1px rgba(255, 255, 255, $opacity);
+
+  .icon {
+    width: $width;
+    left: $left;
+    top: $top;
+    background-position: 0 $icon;
+  }
+
+  .close-notification {
+    background-position: 0 $close-notification;
+  }
+}
+
+.success { @include notification-color(#accc5d, #70892b, #c8e185, #d0e98e, #c1da7f, 0.3, 14px, 16px, 0, -15px, -6px); }
+.fail { @include notification-color(#dc4e4d, #b52525, #ec8282, #f48888, #e17575, 0.2, 13px, 16px, 0, 0, 0); }
+.info { @include notification-color(#69c0ca, #3d8d98, #8aced6, #99e2eb, #79c6cd, 0.2, 6px, 19px, 0, -30px, -12px); }
+.warning { @include notification-color(#f9b516, #c2721b, #fbb160, #ffd57f, #ffa544, 0.2, 14px, 16px, 13px, -45px, -18px); }
+.edit { @include notification-color(#e9c95f, #ae8500, #f3dc8f, #ffeaa7, #f3d573, 0.2, 13px, 16px, 13px, -60px, -60px); }
+.lock { @include notification-color(#CCC, #666, #e8e8e8, #f4f4f4, #e0e0e0, 0.2, 11px, 17px, 13px, -75px, -24px); }
+.tip { @include notification-color(#e6b96f, #b1802f, #f5dcb2, #ffedcf, #f8d69e, 0.2, 9px, 18px, 12px, -90px, -30px); }
+.download { @include notification-color(#3178c0, #0c4fa3, #6dacea, #8ed0fa, #4e95dc, 0.2, 10px, 18px, 0, -105px, -36px); }
+.chat { @include notification-color(#5d902f, #366f11, #89bc5a, #8dcb3d, #74a547, 0.2, 14px, 16px, 0, -120px, -42px); }
+.task { @include notification-color(#71502b, #432c12, #92724e, #a58868, #886640, 0.2, 14px, 16px, 13px, -135px, -48px); }
+
+@media only screen and (min-width:0px) and (max-width:479px) {
+  .notification {
+    font-size: 11px !important;
+    min-height: 14px !important;
+    line-height: 14px !important
+  }
+  .notification span {
+    margin-right: 3px !important
+  }
+}
