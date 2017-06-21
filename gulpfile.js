@@ -23,7 +23,7 @@ gulp.task('build:sass', ['clean'], function () {
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('build:images', ['build:sass'], function () {
+gulp.task('copy:images', ['build:sass'], function () {
   return gulp.src(sourceSass + '/images/**/*')
     .pipe(gulp.dest(dest + '/images/'));
 });
@@ -35,9 +35,9 @@ gulp.task('build:csr', ['clean'], function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build:js', ['build:sass'], function () {
+gulp.task('copy:js', ['build:sass'], function () {
   return gulp.src(sourceJs + 'announcement-message.min.js')
     .pipe(gulp.dest(dest));
 });
 
-gulp.task('default', [ 'clean', 'build:sass', 'build:images', 'build:csr', 'build:js' ]);
+gulp.task('default', [ 'clean', 'build:sass', 'copy:images', 'build:csr', 'copy:js' ]);
