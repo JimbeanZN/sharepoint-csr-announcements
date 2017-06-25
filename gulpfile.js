@@ -35,7 +35,7 @@ gulp.task('build:csr', ['clean'], function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('copy:js', ['build:sass'], function () {
+gulp.task('copy:js', ['build:csr'], function () {
   return gulp.src(sourceJs + 'announcement-message.min.js')
     .pipe(gulp.dest(dest));
 });
